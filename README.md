@@ -2,11 +2,18 @@
 
 Run node from a docker container
 
-Based on `ubuntu:16.04` image, as `www-data` user with [gosu](https://github.com/tianon/gosu).
+Based on `ubuntu:16.04` image, as `www-data` user with [gosu](https://github.com/tianon/gosu), with some extra packages & modules.
 
-With the following packages have added:
+## Install
+```sh
+docker pull mgcrea/node:6
+```
 
-``
+## Extra
+
+- packages added:
+
+```
 ffmpeg
 git
 graphicsmagick-imagemagick-compat
@@ -25,16 +32,11 @@ tmux
 vim
 ```
 
-With the following node_modules added:
+- node_modules added:
 
 ```
 nodemon
 yarn
-```
-
-## Install
-```sh
-docker pull mgcrea/node:6
 ```
 
 ## Usage
