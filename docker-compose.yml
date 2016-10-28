@@ -1,0 +1,16 @@
+# https://docs.docker.com/compose/yml/
+
+node:
+  container_name: node
+  hostname: node
+  image: mgcrea/node:6
+  environment:
+    - NODE_USER=www-data
+    - NODE_GROUP=www-data
+    - UID=33
+    - GID=33
+  ports:
+    - "3000:3000"
+  volumes:
+    - ./www:/srv/www
+  restart: always
