@@ -19,6 +19,10 @@ git
 graphicsmagick-imagemagick-compat
 iputils-ping
 jq
+libcairo2
+libgif
+libjpeg8
+libpango1.0
 libav-tools
 libkrb5-dev
 mediainfo

@@ -35,6 +35,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     autoconf \
     automake \
+    build-essential \
     bzip2 \
     file \
     g++ \
@@ -42,20 +43,24 @@ RUN apt-get update \
     # imagemagick \
     libbz2-dev \
     libc6-dev \
+    libcairo2-dev \
     libcurl4-openssl-dev \
     libdb-dev \
     libevent-dev \
     libffi-dev \
     libgdbm-dev \
     libgeoip-dev \
+    libgif-dev \
     libglib2.0-dev \
     libjpeg-dev \
+    libjpeg8-dev \
     libkrb5-dev \
     liblzma-dev \
     libmagickcore-dev \
     libmagickwand-dev \
     libmysqlclient-dev \
     libncurses-dev \
+    libpango1.0-dev \
     libpng-dev \
     libpq-dev \
     libreadline-dev \
