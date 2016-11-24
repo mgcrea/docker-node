@@ -14,13 +14,18 @@ docker pull mgcrea/node:6
 - packages added:
 
 ```
+build-essential
 ffmpeg
 git
 graphicsmagick-imagemagick-compat
 iputils-ping
 jq
 libav-tools
+libcairo2-dev
+libgif-dev
+libjpeg8-dev
 libkrb5-dev
+libpango1.0-dev
 mediainfo
 nano
 net-tools

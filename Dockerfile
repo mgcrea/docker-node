@@ -85,13 +85,18 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 # install custom packages
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    build-essential \
     ffmpeg \
     git \
     graphicsmagick-imagemagick-compat \
     iputils-ping \
     jq \
     libav-tools \
+    libcairo2-dev \
+    libgif-dev \
+    libjpeg8-dev \
     libkrb5-dev \
+    libpango1.0-dev \
     mediainfo \
     nano \
     net-tools \

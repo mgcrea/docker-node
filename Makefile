@@ -19,3 +19,6 @@ release: rebuild
 
 push:
 	@scripts/push.sh ${DOCKER_IMAGE} ${IMAGE_VERSION}
+
+test:
+	@docker run --rm --entrypoint /bin/bash -it ${DOCKER_IMAGE}:latest
