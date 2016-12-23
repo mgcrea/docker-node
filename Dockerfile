@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Olivier Louvignes <olivier@mgcrea.io>
 
 ARG IMAGE_VERSION
-ENV IMAGE_VERSION ${IMAGE_VERSION:-6.9.1}
+ENV IMAGE_VERSION ${IMAGE_VERSION:-6.9.2}
 ENV NODE_VERSION $IMAGE_VERSION
 ENV NODE_USER www-data
 ENV NODE_GROUP www-data
@@ -115,11 +115,14 @@ RUN apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# setup home
+RUN mkdir /var/www \
+  && chown $NODE_USER:$NODE_GROUP /var/www
+
 # volume
 WORKDIR /srv/www
 VOLUME ["/srv/www"]
 
-ADD ./files/entrypoint.sh /sbin/entrypoint.sh
-RUN chmod 770 /sbin/entrypoint.sh
-ENTRYPOINT ["/sbin/entrypoint.sh"]
-CMD []
+ADD ./files/init.sh /sbin/init.sh
+RUN chmod 770 /sbin/init.sh
+CMD ["/sbin/init.sh"]
