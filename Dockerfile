@@ -123,6 +123,6 @@ RUN mkdir /var/www \
 WORKDIR /srv/www
 VOLUME ["/srv/www"]
 
-ADD ./files/init.sh /sbin/init.sh
-RUN chmod 770 /sbin/init.sh
-CMD ["/sbin/init.sh"]
+ADD ./files/node /usr/local/sbin/node
+RUN chmod 770 /usr/local/sbin/node
+CMD ["node"]
