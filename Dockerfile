@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Olivier Louvignes <olivier@mgcrea.io>
 
 ARG IMAGE_VERSION
-ENV IMAGE_VERSION ${IMAGE_VERSION:-6.9.2}
+ENV IMAGE_VERSION ${IMAGE_VERSION:-6.0.0}
 ENV NODE_VERSION $IMAGE_VERSION
 ENV NODE_USER www-data
 ENV NODE_GROUP www-data
@@ -97,6 +97,7 @@ RUN apt-get update \
     libjpeg8-dev \
     libkrb5-dev \
     libpango1.0-dev \
+    libudev-dev \
     mediainfo \
     nano \
     net-tools \
