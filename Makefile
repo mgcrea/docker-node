@@ -1,8 +1,14 @@
 DOCKER_IMAGE := mgcrea/node
-IMAGE_VERSION := 6.9.5
+IMAGE_VERSION := 6.10.0
 BASE_IMAGE := ubuntu:16.04
 
 all: build
+
+run:
+	@docker run --privileged --rm --net=host -it ${DOCKER_IMAGE}:${IMAGE_VERSION}
+
+bash:
+	@docker run --privileged --rm --net=host -it ${DOCKER_IMAGE}:${IMAGE_VERSION} /bin/bash
 
 build:
 	@docker build --build-arg IMAGE_VERSION=${IMAGE_VERSION} --tag=${DOCKER_IMAGE}:latest .

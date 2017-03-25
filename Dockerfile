@@ -104,6 +104,7 @@ RUN apt-get update \
     openssl \
     rsync \
     screen \
+    ssh \
     software-properties-common \
     tmux \
     vim
