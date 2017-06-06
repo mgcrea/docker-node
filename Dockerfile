@@ -110,7 +110,7 @@ RUN apt-get update \
     vim
 
 # install custom node_modules
-RUN npm i -g nodemon @mgcrea/yarn
+RUN npm i -g nodemon yarn@v0.26.0
 
 # apt cleanup 
 RUN apt-get autoremove -y \
