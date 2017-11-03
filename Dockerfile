@@ -110,12 +110,16 @@ RUN apt-get update \
     vim
 
 # install custom node_modules
-RUN npm i -g nodemon yarn@v0.26.0
+RUN npm i -g nodemon yarn
 
 # apt cleanup 
 RUN apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
+
+# docker group setup
+RUN groupadd docker -g 999 \
+  && usermod -aG docker $NODE_USER
 
 # setup home
 RUN mkdir /var/www \
