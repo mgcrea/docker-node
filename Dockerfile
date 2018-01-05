@@ -64,6 +64,20 @@ RUN apt-get update \
     libkrb5-dev \
     libpango1.0-dev \
     libudev-dev \
+    libx11-xcb1 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxi6 \
+    libxtst6 \
+    libnss3 \
+    libcups2 \
+    libxss1 \
+    libxrandr2 \
+    libgconf2-4 \
+    libasound2 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libgtk-3-0 \
     mediainfo \
     nano \
     net-tools \
@@ -150,7 +164,7 @@ RUN set -ex \
 # install custom node_modules
 RUN npm i -g nodemon
 
-# apt cleanup 
+# apt cleanup
 RUN apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
