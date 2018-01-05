@@ -143,7 +143,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 # grab yarn
-ENV YARN_VERSION 1.2.1
+ENV YARN_VERSION 1.3.2
 RUN set -ex \
   && for key in \
     6A010C5166006599AA17F08146C2130DFD2497F5 \
