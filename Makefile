@@ -1,5 +1,5 @@
 DOCKER_IMAGE := mgcrea/node
-IMAGE_VERSION := 8.9.1
+IMAGE_VERSION := 8.9.4
 BASE_IMAGE := ubuntu:16.04
 
 all: build
